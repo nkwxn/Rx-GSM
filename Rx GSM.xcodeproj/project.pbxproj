@@ -7,23 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10AFDBC04B9A2A82029CAE05 /* Pods_Rx_GSM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D58A2F3B300844BBA40533A /* Pods_Rx_GSM.framework */; };
+		D5036C9027FAB22100B34F42 /* PhoneSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5036C8F27FAB22100B34F42 /* PhoneSpec.swift */; };
+		D57635B027F1AFC800634F22 /* ColorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57635AF27F1AFC800634F22 /* ColorConst.swift */; };
+		D57635B627F1C36800634F22 /* PhoneSpecCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57635B527F1C36800634F22 /* PhoneSpecCoordinator.swift */; };
+		D5B013D327FB3C2A003B5164 /* BasePhoneInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B013D227FB3C2A003B5164 /* BasePhoneInfoView.swift */; };
+		D5B013D527FB3D96003B5164 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B013D427FB3D96003B5164 /* BaseView.swift */; };
+		D5B11C1327FBFC87003A472D /* InfoHeaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B11C1227FBFC87003A472D /* InfoHeaderTextView.swift */; };
+		D5B3A25927F58C34001DBE12 /* PhoneSpecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3A25727F58C34001DBE12 /* PhoneSpecViewController.swift */; };
+		D5B3A25D27F58EB9001DBE12 /* PhoneSpecViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3A25C27F58EB9001DBE12 /* PhoneSpecViewModel.swift */; };
 		D5D6C63927F033A50002D1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6C63827F033A50002D1A8 /* AppDelegate.swift */; };
 		D5D6C63B27F033A50002D1A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6C63A27F033A50002D1A8 /* SceneDelegate.swift */; };
-		D5D6C63D27F033A50002D1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6C63C27F033A50002D1A8 /* ViewController.swift */; };
-		D5D6C64027F033A50002D1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D6C63E27F033A50002D1A8 /* Main.storyboard */; };
 		D5D6C64227F033A70002D1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D6C64127F033A70002D1A8 /* Assets.xcassets */; };
 		D5D6C64527F033A70002D1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D6C64327F033A70002D1A8 /* LaunchScreen.storyboard */; };
+		D5D6C65227F036350002D1A8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6C65127F036350002D1A8 /* BaseViewController.swift */; };
+		D5D6C65427F047EB0002D1A8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6C65327F047EB0002D1A8 /* Coordinator.swift */; };
+		D5DC6B9027F050A600227074 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6B8F27F050A600227074 /* TabBarController.swift */; };
+		D5DC6B9327F050EC00227074 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6B9227F050EC00227074 /* TabBarCoordinator.swift */; };
+		D5DC6B9527F0531100227074 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6B9427F0531100227074 /* AppCoordinator.swift */; };
+		D5DC6B9C27F054D900227074 /* PhoneGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6B9B27F054D900227074 /* PhoneGalleryViewController.swift */; };
+		D5DC6B9E27F054FB00227074 /* PhoneGalleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6B9D27F054FB00227074 /* PhoneGalleryCoordinator.swift */; };
+		D5DC6BA227F05F4600227074 /* BrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BA127F05F4600227074 /* BrandsViewController.swift */; };
+		D5DC6BA627F05F7600227074 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BA527F05F7600227074 /* SearchViewController.swift */; };
+		D5DC6BA827F0614900227074 /* BrandsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BA727F0614900227074 /* BrandsCoordinator.swift */; };
+		D5DC6BAA27F07CF400227074 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BA927F07CF400227074 /* SearchCoordinator.swift */; };
+		D5DC6BAD27F07EF300227074 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BAC27F07EF300227074 /* UIView+Extension.swift */; };
+		D5DC6BAF27F0A96700227074 /* PhoneGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BAE27F0A96700227074 /* PhoneGalleryViewModel.swift */; };
+		D5DC6BB127F0AA4C00227074 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BB027F0AA4C00227074 /* Phone.swift */; };
+		D5DC6BB427F0AB8100227074 /* PhoneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BB327F0AB8100227074 /* PhoneCollectionViewCell.swift */; };
+		D5DC6BB727F0B17700227074 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BB627F0B17700227074 /* BaseRequest.swift */; };
+		D5DC6BBA27F0B19A00227074 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BB927F0B19A00227074 /* APIRequest.swift */; };
+		D5DC6BBD27F17B4900227074 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DC6BBC27F17B4900227074 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D58A2F3B300844BBA40533A /* Pods_Rx_GSM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_GSM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C669BE8E808C3AC680F4348 /* Pods-Rx GSM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx GSM.release.xcconfig"; path = "Target Support Files/Pods-Rx GSM/Pods-Rx GSM.release.xcconfig"; sourceTree = "<group>"; };
+		6D38EAEEEB117E9771D0D076 /* Pods-Rx GSM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx GSM.debug.xcconfig"; path = "Target Support Files/Pods-Rx GSM/Pods-Rx GSM.debug.xcconfig"; sourceTree = "<group>"; };
+		D5036C8F27FAB22100B34F42 /* PhoneSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSpec.swift; sourceTree = "<group>"; };
+		D57635AF27F1AFC800634F22 /* ColorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConst.swift; sourceTree = "<group>"; };
+		D57635B527F1C36800634F22 /* PhoneSpecCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSpecCoordinator.swift; sourceTree = "<group>"; };
+		D5B013D227FB3C2A003B5164 /* BasePhoneInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePhoneInfoView.swift; sourceTree = "<group>"; };
+		D5B013D427FB3D96003B5164 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D5B11C1227FBFC87003A472D /* InfoHeaderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHeaderTextView.swift; sourceTree = "<group>"; };
+		D5B3A25727F58C34001DBE12 /* PhoneSpecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSpecViewController.swift; sourceTree = "<group>"; };
+		D5B3A25C27F58EB9001DBE12 /* PhoneSpecViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSpecViewModel.swift; sourceTree = "<group>"; };
 		D5D6C63527F033A50002D1A8 /* Rx GSM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx GSM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D6C63827F033A50002D1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D6C63A27F033A50002D1A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5D6C63C27F033A50002D1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5D6C63F27F033A50002D1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5D6C64127F033A70002D1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D6C64427F033A70002D1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5D6C64627F033A70002D1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D6C65127F036350002D1A8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D5D6C65327F047EB0002D1A8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D5DC6B8F27F050A600227074 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D5DC6B9227F050EC00227074 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		D5DC6B9427F0531100227074 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D5DC6B9B27F054D900227074 /* PhoneGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneGalleryViewController.swift; sourceTree = "<group>"; };
+		D5DC6B9D27F054FB00227074 /* PhoneGalleryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneGalleryCoordinator.swift; sourceTree = "<group>"; };
+		D5DC6BA127F05F4600227074 /* BrandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsViewController.swift; sourceTree = "<group>"; };
+		D5DC6BA527F05F7600227074 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D5DC6BA727F0614900227074 /* BrandsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCoordinator.swift; sourceTree = "<group>"; };
+		D5DC6BA927F07CF400227074 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		D5DC6BAC27F07EF300227074 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D5DC6BAE27F0A96700227074 /* PhoneGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneGalleryViewModel.swift; sourceTree = "<group>"; };
+		D5DC6BB027F0AA4C00227074 /* Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
+		D5DC6BB327F0AB8100227074 /* PhoneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5DC6BB627F0B17700227074 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		D5DC6BB927F0B19A00227074 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D5DC6BBC27F17B4900227074 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +83,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AFDBC04B9A2A82029CAE05 /* Pods_Rx_GSM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753B0A331D28CCBB00E19F25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D58A2F3B300844BBA40533A /* Pods_Rx_GSM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D57635AD27F1AFAC00634F22 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D57635AF27F1AFC800634F22 /* ColorConst.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D57635B127F1C32B00634F22 /* 04 Phone Spec Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D5B3A25B27F58E47001DBE12 /* ViewModel */,
+				D57635B427F1C35800634F22 /* View */,
+			);
+			path = "04 Phone Spec Detail";
+			sourceTree = "<group>";
+		};
+		D57635B427F1C35800634F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5B013D127FB3BFF003B5164 /* Child Views */,
+				D57635B527F1C36800634F22 /* PhoneSpecCoordinator.swift */,
+				D5B3A25727F58C34001DBE12 /* PhoneSpecViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5B013D127FB3BFF003B5164 /* Child Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5B013D227FB3C2A003B5164 /* BasePhoneInfoView.swift */,
+				D5B11C1227FBFC87003A472D /* InfoHeaderTextView.swift */,
+			);
+			path = "Child Views";
+			sourceTree = "<group>";
+		};
+		D5B3A25B27F58E47001DBE12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5B3A25C27F58EB9001DBE12 /* PhoneSpecViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D5D6C62C27F033A50002D1A8 = {
 			isa = PBXGroup;
 			children = (
 				D5D6C63727F033A50002D1A8 /* Rx GSM */,
 				D5D6C63627F033A50002D1A8 /* Products */,
+				DEFEFD2BBE29552473301B5E /* Pods */,
+				753B0A331D28CCBB00E19F25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +163,196 @@
 		D5D6C63727F033A50002D1A8 /* Rx GSM */ = {
 			isa = PBXGroup;
 			children = (
-				D5D6C63827F033A50002D1A8 /* AppDelegate.swift */,
-				D5D6C63A27F033A50002D1A8 /* SceneDelegate.swift */,
-				D5D6C63C27F033A50002D1A8 /* ViewController.swift */,
-				D5D6C63E27F033A50002D1A8 /* Main.storyboard */,
+				D5D6C64C27F0342C0002D1A8 /* Vendor */,
+				D5D6C64D27F034310002D1A8 /* Module */,
 				D5D6C64127F033A70002D1A8 /* Assets.xcassets */,
 				D5D6C64327F033A70002D1A8 /* LaunchScreen.storyboard */,
 				D5D6C64627F033A70002D1A8 /* Info.plist */,
 			);
 			path = "Rx GSM";
+			sourceTree = "<group>";
+		};
+		D5D6C64C27F0342C0002D1A8 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D57635AD27F1AFAC00634F22 /* Constants */,
+				D5DC6BAB27F07EDC00227074 /* Extensions */,
+				D5D6C65027F0344F0002D1A8 /* Helpers */,
+				D5D6C64F27F034490002D1A8 /* Models */,
+				D5D6C64E27F034400002D1A8 /* Core */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		D5D6C64D27F034310002D1A8 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6B9127F050AA00227074 /* Tab Bar */,
+				D5DC6B9627F053E300227074 /* 01 Gallery */,
+				D5DC6B9727F0549500227074 /* 02 Brands */,
+				D5DC6B9827F054A200227074 /* 03 Search */,
+				D57635B127F1C32B00634F22 /* 04 Phone Spec Detail */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D5D6C64E27F034400002D1A8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D5D6C63827F033A50002D1A8 /* AppDelegate.swift */,
+				D5D6C63A27F033A50002D1A8 /* SceneDelegate.swift */,
+				D5D6C65527F048C20002D1A8 /* Coordinators */,
+				D5D6C65127F036350002D1A8 /* BaseViewController.swift */,
+				D5B013D427FB3D96003B5164 /* BaseView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D5D6C64F27F034490002D1A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BB027F0AA4C00227074 /* Phone.swift */,
+				D5036C8F27FAB22100B34F42 /* PhoneSpec.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5D6C65027F0344F0002D1A8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BB527F0B16600227074 /* Networking */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D5D6C65527F048C20002D1A8 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D5D6C65327F047EB0002D1A8 /* Coordinator.swift */,
+				D5DC6B9427F0531100227074 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D5DC6B9127F050AA00227074 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6B8F27F050A600227074 /* TabBarController.swift */,
+				D5DC6B9227F050EC00227074 /* TabBarCoordinator.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		D5DC6B9627F053E300227074 /* 01 Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6B9A27F054B800227074 /* View */,
+				D5DC6B9927F054B200227074 /* ViewModel */,
+			);
+			path = "01 Gallery";
+			sourceTree = "<group>";
+		};
+		D5DC6B9727F0549500227074 /* 02 Brands */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BA027F05F0800227074 /* ViewModel */,
+				D5DC6B9F27F05F0300227074 /* View */,
+			);
+			path = "02 Brands";
+			sourceTree = "<group>";
+		};
+		D5DC6B9827F054A200227074 /* 03 Search */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BA427F05F5B00227074 /* ViewModel */,
+				D5DC6BA327F05F5700227074 /* View */,
+			);
+			path = "03 Search";
+			sourceTree = "<group>";
+		};
+		D5DC6B9927F054B200227074 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BAE27F0A96700227074 /* PhoneGalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5DC6B9A27F054B800227074 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BB227F0AB5E00227074 /* CollectionViewCells */,
+				D5DC6B9B27F054D900227074 /* PhoneGalleryViewController.swift */,
+				D5DC6B9D27F054FB00227074 /* PhoneGalleryCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5DC6B9F27F05F0300227074 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BA127F05F4600227074 /* BrandsViewController.swift */,
+				D5DC6BA727F0614900227074 /* BrandsCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5DC6BA027F05F0800227074 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5DC6BA327F05F5700227074 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BA527F05F7600227074 /* SearchViewController.swift */,
+				D5DC6BA927F07CF400227074 /* SearchCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5DC6BA427F05F5B00227074 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5DC6BAB27F07EDC00227074 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BAC27F07EF300227074 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D5DC6BB227F0AB5E00227074 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BB327F0AB8100227074 /* PhoneCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D5DC6BB527F0B16600227074 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D5DC6BB627F0B17700227074 /* BaseRequest.swift */,
+				D5DC6BB927F0B19A00227074 /* APIRequest.swift */,
+				D5DC6BBC27F17B4900227074 /* DataManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DEFEFD2BBE29552473301B5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D38EAEEEB117E9771D0D076 /* Pods-Rx GSM.debug.xcconfig */,
+				5C669BE8E808C3AC680F4348 /* Pods-Rx GSM.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +362,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5D6C64927F033A70002D1A8 /* Build configuration list for PBXNativeTarget "Rx GSM" */;
 			buildPhases = (
+				3164BC8926B3CD33C34D5E09 /* [CP] Check Pods Manifest.lock */,
 				D5D6C63127F033A50002D1A8 /* Sources */,
 				D5D6C63227F033A50002D1A8 /* Frameworks */,
 				D5D6C63327F033A50002D1A8 /* Resources */,
+				8D2F470A2430499E61EA48CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +417,92 @@
 			files = (
 				D5D6C64527F033A70002D1A8 /* LaunchScreen.storyboard in Resources */,
 				D5D6C64227F033A70002D1A8 /* Assets.xcassets in Resources */,
-				D5D6C64027F033A50002D1A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3164BC8926B3CD33C34D5E09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx GSM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2F470A2430499E61EA48CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx GSM/Pods-Rx GSM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx GSM/Pods-Rx GSM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx GSM/Pods-Rx GSM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5D6C63127F033A50002D1A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D6C63D27F033A50002D1A8 /* ViewController.swift in Sources */,
+				D5DC6BB127F0AA4C00227074 /* Phone.swift in Sources */,
+				D5DC6BA227F05F4600227074 /* BrandsViewController.swift in Sources */,
+				D5DC6BB427F0AB8100227074 /* PhoneCollectionViewCell.swift in Sources */,
+				D5DC6BAA27F07CF400227074 /* SearchCoordinator.swift in Sources */,
+				D5B3A25927F58C34001DBE12 /* PhoneSpecViewController.swift in Sources */,
+				D5DC6BAF27F0A96700227074 /* PhoneGalleryViewModel.swift in Sources */,
+				D5B013D527FB3D96003B5164 /* BaseView.swift in Sources */,
+				D5DC6BA627F05F7600227074 /* SearchViewController.swift in Sources */,
+				D57635B027F1AFC800634F22 /* ColorConst.swift in Sources */,
+				D5B013D327FB3C2A003B5164 /* BasePhoneInfoView.swift in Sources */,
+				D5DC6BBA27F0B19A00227074 /* APIRequest.swift in Sources */,
+				D5DC6B9C27F054D900227074 /* PhoneGalleryViewController.swift in Sources */,
+				D5DC6B9E27F054FB00227074 /* PhoneGalleryCoordinator.swift in Sources */,
+				D5DC6BB727F0B17700227074 /* BaseRequest.swift in Sources */,
+				D5D6C65227F036350002D1A8 /* BaseViewController.swift in Sources */,
+				D5036C9027FAB22100B34F42 /* PhoneSpec.swift in Sources */,
+				D5D6C65427F047EB0002D1A8 /* Coordinator.swift in Sources */,
 				D5D6C63927F033A50002D1A8 /* AppDelegate.swift in Sources */,
+				D5DC6BAD27F07EF300227074 /* UIView+Extension.swift in Sources */,
+				D5B3A25D27F58EB9001DBE12 /* PhoneSpecViewModel.swift in Sources */,
+				D5DC6B9027F050A600227074 /* TabBarController.swift in Sources */,
+				D5DC6BBD27F17B4900227074 /* DataManager.swift in Sources */,
+				D57635B627F1C36800634F22 /* PhoneSpecCoordinator.swift in Sources */,
+				D5DC6BA827F0614900227074 /* BrandsCoordinator.swift in Sources */,
+				D5B11C1327FBFC87003A472D /* InfoHeaderTextView.swift in Sources */,
+				D5DC6B9327F050EC00227074 /* TabBarCoordinator.swift in Sources */,
 				D5D6C63B27F033A50002D1A8 /* SceneDelegate.swift in Sources */,
+				D5DC6B9527F0531100227074 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D5D6C63E27F033A50002D1A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5D6C63F27F033A50002D1A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D5D6C64327F033A70002D1A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +630,7 @@
 		};
 		D5D6C64A27F033A70002D1A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D38EAEEEB117E9771D0D076 /* Pods-Rx GSM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +641,6 @@
 				INFOPLIST_FILE = "Rx GSM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +658,7 @@
 		};
 		D5D6C64B27F033A70002D1A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C669BE8E808C3AC680F4348 /* Pods-Rx GSM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +669,6 @@
 				INFOPLIST_FILE = "Rx GSM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
