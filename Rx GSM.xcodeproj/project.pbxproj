@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10AFDBC04B9A2A82029CAE05 /* Pods_Rx_GSM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D58A2F3B300844BBA40533A /* Pods_Rx_GSM.framework */; };
 		D5036C9027FAB22100B34F42 /* PhoneSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5036C8F27FAB22100B34F42 /* PhoneSpec.swift */; };
+		D50BCB52280023E20091112B /* BrandsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50BCB51280023E20091112B /* BrandsViewModel.swift */; };
 		D57635B027F1AFC800634F22 /* ColorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57635AF27F1AFC800634F22 /* ColorConst.swift */; };
 		D57635B627F1C36800634F22 /* PhoneSpecCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57635B527F1C36800634F22 /* PhoneSpecCoordinator.swift */; };
 		D5B013D327FB3C2A003B5164 /* BasePhoneInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B013D227FB3C2A003B5164 /* BasePhoneInfoView.swift */; };
@@ -45,6 +46,7 @@
 		5C669BE8E808C3AC680F4348 /* Pods-Rx GSM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx GSM.release.xcconfig"; path = "Target Support Files/Pods-Rx GSM/Pods-Rx GSM.release.xcconfig"; sourceTree = "<group>"; };
 		6D38EAEEEB117E9771D0D076 /* Pods-Rx GSM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx GSM.debug.xcconfig"; path = "Target Support Files/Pods-Rx GSM/Pods-Rx GSM.debug.xcconfig"; sourceTree = "<group>"; };
 		D5036C8F27FAB22100B34F42 /* PhoneSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSpec.swift; sourceTree = "<group>"; };
+		D50BCB51280023E20091112B /* BrandsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsViewModel.swift; sourceTree = "<group>"; };
 		D57635AF27F1AFC800634F22 /* ColorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConst.swift; sourceTree = "<group>"; };
 		D57635B527F1C36800634F22 /* PhoneSpecCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSpecCoordinator.swift; sourceTree = "<group>"; };
 		D5B013D227FB3C2A003B5164 /* BasePhoneInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePhoneInfoView.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		D5DC6BA027F05F0800227074 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D50BCB51280023E20091112B /* BrandsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				D5DC6BB427F0AB8100227074 /* PhoneCollectionViewCell.swift in Sources */,
 				D5DC6BAA27F07CF400227074 /* SearchCoordinator.swift in Sources */,
 				D5B3A25927F58C34001DBE12 /* PhoneSpecViewController.swift in Sources */,
+				D50BCB52280023E20091112B /* BrandsViewModel.swift in Sources */,
 				D5DC6BAF27F0A96700227074 /* PhoneGalleryViewModel.swift in Sources */,
 				D5B013D527FB3D96003B5164 /* BaseView.swift in Sources */,
 				D5DC6BA627F05F7600227074 /* SearchViewController.swift in Sources */,

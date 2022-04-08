@@ -8,7 +8,18 @@
 import UIKit
 
 class BrandsViewController: BaseViewController {
+    var viewModel = BrandsViewModel()
     var coordinator: BrandsCoordinator?
+    
+    lazy var brandSearchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        return searchBar
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

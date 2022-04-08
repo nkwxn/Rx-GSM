@@ -48,13 +48,13 @@ class BasePhoneInfoView: BaseView {
     
     lazy var infoStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 14
+        stackView.spacing = 8
         stackView.addArrangedSubview(releaseDateView)
         stackView.addArrangedSubview(dimensionView)
         stackView.addArrangedSubview(operatingSystemView)
         stackView.addArrangedSubview(storageView)
         stackView.axis = .vertical
-        stackView.alignment = .leading
+        stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -77,7 +77,8 @@ class BasePhoneInfoView: BaseView {
         
         phoneImageView.topAnchor
             .constraint(
-                equalTo: topAnchor
+                equalTo: topAnchor,
+                constant: 14
             ).isActive = true
         phoneImageView.leftAnchor
             .constraint(
@@ -86,11 +87,12 @@ class BasePhoneInfoView: BaseView {
             ).isActive = true
         phoneImageView.bottomAnchor
             .constraint(
-                equalTo: bottomAnchor
+                equalTo: bottomAnchor,
+                constant: -14
             ).isActive = true
         phoneImageView.widthAnchor
             .constraint(
-                equalToConstant: 170
+                equalToConstant: 150
             ).isActive = true
         
         addSubview(infoStackView)
@@ -103,7 +105,7 @@ class BasePhoneInfoView: BaseView {
         infoStackView.rightAnchor
             .constraint(
                 equalTo: rightAnchor,
-                constant: -1 * layoutMargins.right
+                constant: -14
             ).isActive = true
         infoStackView.bottomAnchor
             .constraint(

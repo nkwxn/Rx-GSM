@@ -40,6 +40,10 @@ class APIRequest: NSObject {
         }
     }
     
+    static func fetchBrands() {
+        
+    }
+    
     static func fetchImage(url: String, completion: @escaping (Data?, String?) -> Void) {
         BaseRequest.GET_IMAGE(url: url) { response in
             completion(response.data, response.error?.localizedDescription)

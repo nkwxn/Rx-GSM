@@ -10,7 +10,6 @@ import RxSwift
 import RxCocoa
 
 class PhoneSpecViewController: BaseViewController {
-    
     lazy var loadingView: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView()
         loading.startAnimating()
@@ -34,27 +33,76 @@ class PhoneSpecViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.largeTitleDisplayMode = .never
         setupView()
         bindData()
     }
     
     func setupView() {
         view.addSubview(loadingView)
+        view.addSubview(phoneSpecView)
+        phoneSpecView.viewModel = self.viewModel
+    }
+    
+    func layoutViews() {
         loadingView.center = view.center
         loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
-        phoneSpecView.viewModel = self.viewModel
-        view.addSubview(phoneSpecView)
-        phoneSpecView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        phoneSpecView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        phoneSpecView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        phoneSpecView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        // Base constraint for phone info
+        phoneSpecView
+            .topAnchor
+            .constraint(
+                equalTo: view
+                    .safeAreaLayoutGuide
+                    .topAnchor,
+                constant: 0
+            ).isActive = true
+        phoneSpecView
+            .leadingAnchor
+            .constraint(
+                equalTo: view
+                    .safeAreaLayoutGuide
+                    .leadingAnchor,
+                constant: 0
+            ).isActive = true
+        
+        let phoneSpecPortraitHeight = phoneSpecView
+            .heightAnchor
+            .constraint(
+                equalToConstant: 220
+            )
+        
+        if UIDevice.current.orientation.isLandscape {
+            print("Device rotated to landscape")
+            phoneSpecPortraitHeight.isActive = false
+            
+            phoneSpecView
+                .heightAnchor
+                .constraint(
+                    equalToConstant: view.safeAreaLayoutGuide.layoutFrame.size.height
+                ).isActive = true
+            
+            phoneSpecView
+                .widthAnchor
+                .constraint(
+                    equalToConstant: view.frame.size.height
+                ).isActive = true
+        } else {
+            print("Device rotated to portrait")
+            
+            phoneSpecPortraitHeight.isActive = true
+            
+            phoneSpecView
+                .widthAnchor
+                .constraint(
+                    equalToConstant: view.frame.size.width
+                ).isActive = true
+        }
     }
     
     func bindData() {
-        viewModel.phoneSpec.asObserver().map({ spec -> String? in
+        viewModel.phoneSpec.map({ spec -> String? in
             guard let spec = spec else { return "" }
             return Optional("\(spec.brand) \(spec.phoneName)")
         }).bind(to: self.rx.title).disposed(by: bag)
@@ -62,10 +110,16 @@ class PhoneSpecViewController: BaseViewController {
         viewModel.loadingHidden
             .bind(to: self.loadingView.rx.isHidden)
             .disposed(by: bag)
+        viewModel.loadingHidden
+            .map {
+                !$0
+            }
+            .bind(to: self.phoneSpecView.rx.isHidden)
+            .disposed(by: bag)
     }
     
     override func viewDidLayoutSubviews() {
-        
+        super.viewDidLayoutSubviews()
+        layoutViews()
     }
-
 }

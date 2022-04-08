@@ -20,6 +20,7 @@ class TabBarCoordinator: Coordinator {
         tabBarController.coordinator = self
         
         let pgNavigationController = UINavigationController()
+        pgNavigationController.navigationBar.prefersLargeTitles = true
         pgNavigationController.tabBarItem = UITabBarItem(title: "Gallery", image: UIImage(systemName: "candybarphone"), tag: 0)
         let pgCoordinator = PhoneGalleryCoordinator(navigationController: pgNavigationController)
         

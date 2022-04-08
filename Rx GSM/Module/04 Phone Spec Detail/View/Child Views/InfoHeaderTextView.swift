@@ -16,7 +16,7 @@ class InfoHeaderTextView: BaseView {
     
     lazy var labelView: UILabel = {
         let label = UILabel()
-        label.text = "ABCD"
+        label.text = ""
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -30,9 +30,9 @@ class InfoHeaderTextView: BaseView {
     
     func setupView() {
         addSubview(iconView)
-        iconView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        iconView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         iconView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
-        iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+        iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
         iconView.heightAnchor.constraint(equalTo: iconView.widthAnchor, multiplier: 1).isActive = true
         
         addSubview(labelView)

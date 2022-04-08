@@ -16,13 +16,19 @@ class PhoneGalleryViewController: BaseViewController {
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-        layout.itemSize = CGSize(width: (view.frame.size.width / 2) - 30, height: 225)
+        
+        if UIDevice.current.orientation.isPortrait {
+            layout.itemSize = CGSize(width: (view.frame.size.width / 2) - 30, height: 225)
+        } else {
+            layout.itemSize = CGSize(width: 165, height: 225)
+        }
         return layout
     }()
     
     lazy var phonesCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.register(PhoneCollectionViewCell.self, forCellWithReuseIdentifier: PhoneCollectionViewCell.identifier)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
@@ -53,7 +59,11 @@ class PhoneGalleryViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        phonesCollectionView.frame = view.bounds
+        if UIDevice.current.orientation.isLandscape {
+            phonesCollectionView.frame = view.safeAreaLayoutGuide.layoutFrame
+        } else {
+            phonesCollectionView.frame = view.frame
+        }
         loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
