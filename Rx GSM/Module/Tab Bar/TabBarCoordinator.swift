@@ -25,6 +25,7 @@ class TabBarCoordinator: Coordinator {
         let pgCoordinator = PhoneGalleryCoordinator(navigationController: pgNavigationController)
         
         let brandNavigationController = UINavigationController()
+        brandNavigationController.navigationBar.prefersLargeTitles = true
         brandNavigationController.tabBarItem = UITabBarItem(title: "Brands", image: UIImage(systemName: "star"), tag: 1)
         let brandCoordinator = BrandsCoordinator(navigationController: brandNavigationController)
         

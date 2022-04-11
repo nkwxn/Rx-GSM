@@ -24,6 +24,21 @@ class APIRequest: NSObject {
         }
     }
     
+    static func fetchPhones(with brand: Brand, completion: @escaping ([Phone], String?) -> Void) {
+        BaseRequest.GET(url: "https://api-mobilespecs.azharimm.site/v2/brands/\(brand.brandSlug)") { response in
+            do {
+                if let data = response.data {
+                    let phoneModel = try JSONDecoder().decode(PhoneResponse.self, from: data)
+                    completion(phoneModel.data?.phones ?? [Phone](), phoneModel.error)
+                } else {
+                    completion([Phone](), response.error?.localizedDescription)
+                }
+            } catch {
+                print("Error handling JSON content: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     static func fetchPhoneSpec(slug: String, completion: @escaping (PhoneSpec?, String?) -> Void) {
         BaseRequest.GET(url: "https://api-mobilespecs.azharimm.site/v2/\(slug)") { response in
             do {
@@ -40,8 +55,19 @@ class APIRequest: NSObject {
         }
     }
     
-    static func fetchBrands() {
-        
+    static func fetchBrands(completion: @escaping ([Brand], String?) -> Void) {
+        BaseRequest.GET(url: "https://api-mobilespecs.azharimm.site/v2/brands") { response in
+            do {
+                if let data = response.data {
+                    let brandsModel = try JSONDecoder().decode(BrandsResponse.self, from: data)
+                    completion(brandsModel.data ?? [Brand](), brandsModel.error)
+                } else {
+                    completion([Brand](), response.error?.localizedDescription)
+                }
+            } catch {
+                print("Error handling JSON Content: \(error.localizedDescription)")
+            }
+        }
     }
     
     static func fetchImage(url: String, completion: @escaping (Data?, String?) -> Void) {

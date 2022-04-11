@@ -15,7 +15,15 @@ struct PhoneResponse: Codable {
 
 struct PhoneDatas: Codable {
     let title: String?
+    let currentPage: Int?
+    let lastPage: Int?
     let phones: [Phone]?
+    
+    enum CodingKeys: String, CodingKey {
+        case title, phones
+        case currentPage = "current_page"
+        case lastPage = "last_page"
+    }
 }
 
 struct Phone: Codable {

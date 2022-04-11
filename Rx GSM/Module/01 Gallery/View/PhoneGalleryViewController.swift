@@ -33,10 +33,10 @@ class PhoneGalleryViewController: BaseViewController {
     }()
     
     lazy var loadingIndicator: UIActivityIndicatorView = {
-        let indicatorView = UIActivityIndicatorView()
-        indicatorView.startAnimating()
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        return indicatorView
+        let progressView = UIActivityIndicatorView()
+        progressView.startAnimating()
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        return progressView
     }()
     
     override func viewDidLoad() {
@@ -48,10 +48,15 @@ class PhoneGalleryViewController: BaseViewController {
     }
     
     var coordinator: PhoneGalleryCoordinator?
-    var viewModel = PhoneGalleryViewModel()
+    var viewModel: PhoneGalleryViewModel!
+    
+    var phoneBrand: Brand? {
+        didSet {
+            self.title = phoneBrand?.brandName
+        }
+    }
     
     private func setupView() {
-        self.title = "New Phones"
         view.addSubview(phonesCollectionView)
         view.addSubview(loadingIndicator)
     }

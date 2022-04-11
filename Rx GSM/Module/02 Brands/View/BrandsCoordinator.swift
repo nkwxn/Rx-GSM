@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 protocol BrandsFlow: AnyObject {
-    func coordinateToPhones()
+    func coordinateToPhones(with chosenBrand: Brand)
 }
 
-class BrandsCoordinator: Coordinator {
-    weak var navigationController: UINavigationController?
+class BrandsCoordinator: Coordinator, BrandsFlow {
+    var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -24,5 +24,11 @@ class BrandsCoordinator: Coordinator {
         brandsViewController.coordinator = self
         
         navigationController?.pushViewController(brandsViewController, animated: false)
+    }
+    
+    func coordinateToPhones(with chosenBrand: Brand) {
+        print("Should push navigation with brand slug")
+        let coordinator = PhoneGalleryCoordinator(navigationController: navigationController!, brand: chosenBrand)
+        coordinator.start()
     }
 }

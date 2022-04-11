@@ -13,18 +13,28 @@ protocol PhoneGalleryFlow: AnyObject {
 }
 
 class PhoneGalleryCoordinator: Coordinator, PhoneGalleryFlow {
-    
+    let brand: Brand?
     weak var navigationController: UINavigationController?
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, brand: Brand? = nil) {
         self.navigationController = navigationController
+        self.brand = brand
     }
     
     func start() {
         let phoneGalleryViewController = PhoneGalleryViewController()
+        if let brand = brand {
+            phoneGalleryViewController.title = brand.brandName
+            phoneGalleryViewController.viewModel = PhoneGalleryViewModel(with: brand)
+            
+            phoneGalleryViewController.navigationItem.largeTitleDisplayMode = .never
+        } else {
+            phoneGalleryViewController.title = "New Phones"
+            phoneGalleryViewController.viewModel = PhoneGalleryViewModel()
+        }
         phoneGalleryViewController.coordinator = self
         
-        navigationController?.pushViewController(phoneGalleryViewController, animated: false)
+        navigationController?.pushViewController(phoneGalleryViewController, animated: brand != nil)
     }
     
     func coordinateToPhoneSpec(phoneName: String, slug: String) {
