@@ -23,6 +23,13 @@ class PhoneSpecViewController: BaseViewController {
         return view
     }()
     
+    lazy var phoneSpecTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
     var coordinator: PhoneSpecCoordinator?
     var viewModel = PhoneSpecViewModel()
     
@@ -41,6 +48,7 @@ class PhoneSpecViewController: BaseViewController {
     func setupView() {
         view.addSubview(loadingView)
         view.addSubview(phoneSpecView)
+        view.addSubview(phoneSpecTableView)
         phoneSpecView.viewModel = self.viewModel
     }
     
@@ -66,6 +74,22 @@ class PhoneSpecViewController: BaseViewController {
                     .leadingAnchor,
                 constant: 0
             ).isActive = true
+        phoneSpecTableView
+            .trailingAnchor
+            .constraint(
+                equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+                constant: 0
+            ).isActive = true
+        phoneSpecTableView
+            .bottomAnchor
+            .constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                constant: 0
+            ).isActive = true
+        phoneSpecTableView
+            .heightAnchor
+            .constraint(equalToConstant: view.frame.size.height - 220)
+            .isActive = true
         
         let phoneSpecPortraitHeight = phoneSpecView
             .heightAnchor
@@ -88,6 +112,12 @@ class PhoneSpecViewController: BaseViewController {
                 .constraint(
                     equalToConstant: view.frame.size.height
                 ).isActive = true
+            
+            phoneSpecTableView
+                .leadingAnchor
+                .constraint(
+                    equalTo: phoneSpecView.trailingAnchor, constant: 0
+                ).isActive = true
         } else {
             print("Device rotated to portrait")
             
@@ -97,6 +127,17 @@ class PhoneSpecViewController: BaseViewController {
                 .widthAnchor
                 .constraint(
                     equalToConstant: view.frame.size.width
+                ).isActive = true
+            phoneSpecTableView
+                .widthAnchor
+                .constraint(
+                    equalToConstant: view.frame.size.width
+                ).isActive = true
+            
+            phoneSpecTableView
+                .topAnchor
+                .constraint(
+                    equalTo: phoneSpecView.bottomAnchor, constant: 0
                 ).isActive = true
         }
     }
@@ -116,6 +157,20 @@ class PhoneSpecViewController: BaseViewController {
             }
             .bind(to: self.phoneSpecView.rx.isHidden)
             .disposed(by: bag)
+        
+        viewModel.phoneSpec.map({ spec -> [Specification] in
+            guard let spec = spec else { return [] }
+            return spec.specifications ?? []
+        }).bind(to: self.phoneSpecTableView.rx.items(cellIdentifier: "TableViewCell")) { index, spec, cell in
+            var config = cell.defaultContentConfiguration()
+            config.text = spec.title
+            cell.contentConfiguration = config
+        }.disposed(by: bag)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        layoutViews()
     }
     
     override func viewDidLayoutSubviews() {
